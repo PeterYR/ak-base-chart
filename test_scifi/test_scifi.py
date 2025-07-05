@@ -58,4 +58,4 @@ fig.update_yaxes(
 )
 
 fig.show()
-fig.write_html("test_scifi.html")
+fig.write_html("index.html")
