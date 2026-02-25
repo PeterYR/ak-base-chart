@@ -34,18 +34,15 @@ fig.add_scatter(
 )
 
 max_lmd = df_line["lmd"].max()
-max_exp = df_line["exp"].max()
-slope_max = 1 / 0.973642
-slope_min = 1 / 1.565335
+slope = 1111400 / (1334796 + 80000 + 100000 + 120000)
 
 fig.add_scatter(
-    # very close to upper right corner of graph
-    x=[0, max_lmd, None, 0, max_lmd],
-    y=[0, max_lmd * slope_max, None, 0, max_lmd * slope_min],
+    x=[0, max_lmd],
+    y=[0, max_lmd * slope],
     mode="lines",
     line={"color": "gray", "dash": "dot"},
     hoverinfo="skip",
-    name="Demand ratio limits",
+    name="Max 6-star + 1x mod3",
 )
 
 # fig.add_shape(
